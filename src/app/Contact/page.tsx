@@ -58,7 +58,7 @@ export default function ContactMe() {
                 className="border border-gray-300 rounded-md p-3 w-full focus:outline-[#FF0B55]"
               />
               <textarea
-                rows="5"
+                rows={5}
                 placeholder="Describe Project ....."
                 className="border border-gray-300 rounded-md p-3 w-full focus:outline-[#FF0B55]"
               ></textarea>
