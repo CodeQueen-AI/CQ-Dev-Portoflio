@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 export default function ColorTrailCursor() {
   useEffect(() => {
-    const trail = [];
+    const trail: HTMLDivElement[] = [];
     for (let i = 0; i < 20; i++) {
       const div = document.createElement("div");
       div.className = "trail-dot";
@@ -11,10 +11,10 @@ export default function ColorTrailCursor() {
       trail.push(div);
     }
 
-    const move = (e) => {
+    const move = (e: { clientX: number; clientY: number }) => {
       const x = e.clientX;
       const y = e.clientY;
-      trail.forEach((dot, index) => {
+      trail.forEach((dot: { style: { left: string; top: string } }, index) => {
         setTimeout(() => {
           dot.style.left = x + "px";
           dot.style.top = y + "px";
